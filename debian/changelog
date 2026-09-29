@@ -1,3 +1,9 @@
+vyatta-sssd (0.56) trixie; urgency=medium
+
+  * Port to Debian 13 (trixie): debhelper-compat 13, Standards-Version 4.7.2, Rules-Requires-Root, NuDanOS Vcs.
+
+ -- NuDanOS Maintainers <jon@fernandez.tech>  Mon, 28 Sep 2026 23:09:31 -0700
+
 vyatta-sssd (0.55) unstable; urgency=medium
 
   [ Nicholas Brown ]

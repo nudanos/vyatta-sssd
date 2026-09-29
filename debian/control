@@ -1,14 +1,16 @@
 Source: vyatta-sssd
 Section: python
 Priority: optional
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends:
- debhelper (>= 9.20160709),
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
  dh-python,
  dh-yang,
  python3,
  python3-setuptools
-Standards-Version: 3.9.8
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/vyatta-sssd.git
+Vcs-Browser: https://github.com/nudanos/vyatta-sssd
 
 Package: python3-vyatta-sssd
 Architecture: all
@@ -22,7 +24,7 @@ Description: Vyatta configuration wrapper for SSSD
 Package: vyatta-sssd-cfg
 Architecture: all
 Pre-Depends: sssd-common (>= 1.16.3-3danos4)
-Depends:
+Depends: 
  ldb-tools,
  libauthen-pam-perl,
  libnss-sss,
@@ -40,7 +42,7 @@ Description: Vyatta configuration template for SSSD
 
 Package: vyatta-system-login-sssd-v1-yang
 Architecture: all
-Depends:
+Depends: 
  vyatta-sssd-cfg (>= ${source:Version}),
  ${misc:Depends},
  ${yang:Depends}
